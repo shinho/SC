@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<application xmlns="http://ns.adobe.com/air/application/3.5">
+  <id>StampCrawler</id>
+  <versionNumber>0.7</versionNumber>
+  <filename>StampCrawler</filename>
+  <name>Stampcrawler</name>
+  <initialWindow>
+    <title>StampCrawler</title>
+    <content>StampCrawler.swf</content>
+    <systemChrome>standard</systemChrome>
+    <transparent>false</transparent>
+    <visible>true</visible>
+    <minimizable>true</minimizable>
+    <maximizable>true</maximizable>
+    <resizable>true</resizable>
+  </initialWindow>
+  <!-- 
+	More options:
+	http://livedocs.adobe.com/flex/3/html/File_formats_1.html#1043413
+	-->
+  <icon>
+    <image16x16>icons/SCFCLblk16.png</image16x16>
+    <image29x29>icons/SCFCLblk29.png</image29x29>
+    <image32x32>icons/SCFCLblk32.png</image32x32>
+    <image36x36>icons/SCFCLblk36.png</image36x36>
+    <image48x48>icons/SCFCLblk48.png</image48x48>
+    <image72x72>icons/SCFCLblk72.png</image72x72>
+    <image128x128>icons/SCFCLblk128.png</image128x128>
+    <image512x512>icons/SCFCLblk512.png</image512x512>
+  </icon>
+</application>

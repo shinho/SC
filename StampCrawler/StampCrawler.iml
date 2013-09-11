@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="Flex" version="4">
+  <component name="FlexBuildConfigurationManager" active="StampCrawler">
+    <configurations>
+      <configuration name="StampCrawler" target-platform="Desktop" pure-as="true" main-class="StampCrawler" output-file="StampCrawler.swf" output-folder="$MODULE_DIR$/../out/production/StampCrawler">
+        <dependencies target-player="11.1">
+          <entries>
+            <entry library-id="bbd5f0e2-0d72-40e8-a08a-e5a0996baa14">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="6aaa9851-a88e-4df8-b2fd-b7700ac1a3fc">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="89884cba-28d9-4e14-80e1-bf7f205d0b1b">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="9ede8d20-ca21-471a-bc85-01f2c0e6971f">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="a9bb3999-e820-47c7-92b9-7b0e7d65becb">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="f63ee5b8-fb75-41e3-adbd-6f2bfbe9820b">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="6802f0b0-74b9-483d-8df4-c290b3d853d3">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
+          <sdk name="FlexSDK" />
+        </dependencies>
+        <compiler-options />
+        <packaging-air-desktop use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/StampCrawler-app.xml" package-file-name="StampCrawler" />
+        <packaging-android />
+        <packaging-ios />
+      </configuration>
+    </configurations>
+    <compiler-options />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="FlexSDK" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="bbd5f0e2-0d72-40e8-a08a-e5a0996baa14" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../lib/as3-signals-v0.9-BETA/bin/as3-signals-v0.9-BETA.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="6aaa9851-a88e-4df8-b2fd-b7700ac1a3fc" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../lib/applicationupdater.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="89884cba-28d9-4e14-80e1-bf7f205d0b1b" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../lib/jpegencoder.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="9ede8d20-ca21-471a-bc85-01f2c0e6971f" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../lib/greensock.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="a9bb3999-e820-47c7-92b9-7b0e7d65becb" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../lib/robotlegs-framework-v1.5.2.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="f63ee5b8-fb75-41e3-adbd-6f2bfbe9820b" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../lib/stampcrawler_015.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="6802f0b0-74b9-483d-8df4-c290b3d853d3" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../lib/signals-extension-SignalsCommandMap.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>
+
