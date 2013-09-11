@@ -36,21 +36,54 @@ package com.shinho.models
 		}
 
 
+		public function calculateTotalsForOwnedStamps():void
+		{
+			var nStart:Number = new Date().time;
+			_stampsOwned = 0;
+			_totalCost = 0;
+			_totalValue = 0;
+			for ( var i:int = 0; i < _stamps.length; i++ )
+			{
+				var stamp:StampDTO = _stamps[i] as StampDTO;
+				if ( stamp.owned )
+				{
+					_stampsOwned++;
+					_totalCost += stamp.cost;
+					_totalValue += stamp.current_value;
+				}
+			}
+			var nMillisElapsed:Number = new Date().time - nStart;
+			trace( "getting owned stamps:", nMillisElapsed );
+		}
+
+
+		public function getBiggerStampNumber():int
+		{
+			var lastNumber:String = _stamps[stamps.length - 1].number;
+			var biggerStamp:String = StringUtils.stripZeros( lastNumber );
+			if ( int( biggerStamp ) == NaN )
+			{
+				biggerStamp = biggerStamp.substring( 0, biggerStamp.length - 1 );
+			}
+			return int( biggerStamp );
+		}
+
+
 		public function getCurrentStamp():StampDTO
 		{
 			return stamps[currentStampID];
 		}
 
 
-		public function getStamps(countryName:String, stampType:String):void
+		public function getStamps( countryName:String, stampType:String ):void
 		{
-			_stamps = Vector.<StampDTO>(db.getStampsForCountryAndType(countryName, stampType));
-			if (_stamps.length > 0)
+			_stamps = Vector.<StampDTO>( db.getStampsForCountryAndType( countryName, stampType ) );
+			if ( _stamps.length > 0 )
 			{
 				_hasStamps = true;
-				_stamps = StringUtils.paddedNumberedArray(_stamps);
-				_stamps.sort(stampsOrderCriteria);
-				_stamps = StringUtils.stripPaddedArray(stamps);
+				_stamps = StringUtils.paddedNumberedArray( _stamps );
+				_stamps.sort( stampsOrderCriteria );
+				_stamps = StringUtils.stripPaddedArray( stamps );
 				_numberOfStamps = _stamps.length;
 				_stampSeries = getSeries();
 				serializeStamps();
@@ -59,13 +92,13 @@ package com.shinho.models
 		}
 
 
-		private static function stampsOrderCriteria(a:StampDTO, b:StampDTO):Number
+		private static function stampsOrderCriteria( a:StampDTO, b:StampDTO ):Number
 		{
-			if (a.number < b.number)
+			if ( a.number < b.number )
 			{
 				return -1;
 			}
-			else if (a.number == b.number)
+			else if ( a.number == b.number )
 			{
 				return 0;
 			}
@@ -75,51 +108,51 @@ package com.shinho.models
 		}
 
 
-		private function onStampUpdated(stamp:StampDTO):void
-		{
-
-		}
-
-
 		private function getSeries():Vector.<SerieDTO>
 		{
-			var serieNames:Vector.<SerieDTO> = Vector.<SerieDTO>([]);
-			for (var i:int = 0; i < _numberOfStamps; i++)
+			var serieNames:Vector.<SerieDTO> = Vector.<SerieDTO>( [] );
+			for ( var i:int = 0; i < _numberOfStamps; i++ )
 			{
 				var found:Boolean = false;
-				if (serieNames.length > 0)
+				if ( serieNames.length > 0 )
 				{
-					for (var s:int = 0; s < serieNames.length; s++)
+					for ( var s:int = 0; s < serieNames.length; s++ )
 					{
-						if (_stamps[i].serie == serieNames[s].serieName && _stamps[i].year == serieNames[s].serieYear)
+						if ( _stamps[i].serie == serieNames[s].serieName && _stamps[i].year == serieNames[s].serieYear )
 						{
 							found = true;
 						}
 					}
 				}
-				if (!found)
+				if ( !found )
 				{
 					var serie:SerieDTO = new SerieDTO();
 					serie.serieName = _stamps[i].serie;
 					serie.serieYear = _stamps[i].year;
-					serieNames.push(serie);
+					serieNames.push( serie );
 				}
 			}
 			return serieNames;
 		}
 
 
+		private function onStampUpdated( stamp:StampDTO ):void
+		{
+
+		}
+
+
 		private function serializeStamps():void
 		{
-			for (var u:int = 0; u < _stamps.length; u++)
+			for ( var u:int = 0; u < _stamps.length; u++ )
 			{
 				var stamp:StampDTO = _stamps[u];
-				for (var i:int = 0; i < _stampSeries.length; i++)
+				for ( var i:int = 0; i < _stampSeries.length; i++ )
 				{
 					var serieDTO:SerieDTO = _stampSeries[i];
-					if (stamp.serie == serieDTO.serieName && stamp.year == serieDTO.serieYear)
+					if ( stamp.serie == serieDTO.serieName && stamp.year == serieDTO.serieYear )
 					{
-						serieDTO.serieStamps.push(stamp);
+						serieDTO.serieStamps.push( stamp );
 					}
 				}
 			}
@@ -150,39 +183,9 @@ package com.shinho.models
 		}
 
 
-		public function set currentStampID(value:uint):void
+		public function set currentStampID( value:uint ):void
 		{
 			_currentStampID = value;
-		}
-
-
-		public function calculateTotalsForOwnedStamps():void
-		{
-			var nStart:Number = new Date().time;
-			_stampsOwned = 0;
-			_totalCost = 0;
-			_totalValue = 0;
-			for (var i:int = 0; i < _stamps.length; i++)
-			{
-				var stamp:StampDTO = _stamps[i] as StampDTO;
-				if (stamp.owned) {
-					_stampsOwned++;
-					_totalCost += stamp.cost;
-					_totalValue += stamp.current_value;
-				}
-			}
-			var nMillisElapsed:Number = new Date().time - nStart;
-			trace("getting owned stamps:",nMillisElapsed) ;
-		}
-
-
-		public function getBiggerStampNumber():int
-		{
-			var lastNumber:String = _stamps[stamps.length-1].number;
-			var biggerStamp:String = StringUtils.stripZeros(lastNumber);
-			if (int(biggerStamp) == NaN)
-				biggerStamp = biggerStamp.substring(0, biggerStamp.length - 1);
-			return int(biggerStamp);
 		}
 
 
