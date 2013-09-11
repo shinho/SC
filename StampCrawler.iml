@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="Flex" version="4">
+  <component name="FlexBuildConfigurationManager" active="StampCrawler">
+    <configurations>
+      <configuration name="StampCrawler" target-platform="Desktop" pure-as="true" main-class="StampCrawler" output-file="StampCrawler.swf" output-folder="$MODULE_DIR$/out/production/StampCrawler">
+        <dependencies target-player="11.5">
+          <entries>
+            <entry library-id="1eb1b493-2979-403e-abdc-7626815ea13e">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="9eeb2221-a249-4022-982f-a0e7819ac8fd">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="c422f031-aa5b-4213-91b8-d6953e178073">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="d862d44a-52e7-4799-ae81-a75f2a7cf3e6">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="5019e64e-c12b-4eaa-a629-afe00d619cb1">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="cec3dc72-4ace-450b-a761-90bc77cc627f">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="1d995627-c78c-4867-af91-8cd19bdd01a1">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="51e768a3-4a97-4597-b543-f0ce958ba41c">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
+          <sdk name="flexsdk" />
+        </dependencies>
+        <compiler-options>
+          <map>
+            <entry key="compiler.debug.swf" value="true" />
+            <entry key="compiler.keep-generated-actionscript" value="true" />
+          </map>
+        </compiler-options>
+        <packaging-air-desktop use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/StampCrawler-app.xml" package-file-name="StampCrawler" />
+        <packaging-android />
+        <packaging-ios />
+      </configuration>
+    </configurations>
+    <compiler-options />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="flexsdk" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="1eb1b493-2979-403e-abdc-7626815ea13e" />
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="9eeb2221-a249-4022-982f-a0e7819ac8fd" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/applicationupdater.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="c422f031-aa5b-4213-91b8-d6953e178073" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/applicationupdater_ui.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="d862d44a-52e7-4799-ae81-a75f2a7cf3e6" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/greensock.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="5019e64e-c12b-4eaa-a629-afe00d619cb1" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/jpegencoder.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="cec3dc72-4ace-450b-a761-90bc77cc627f" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/robotlegs-framework-v1.5.2.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="1d995627-c78c-4867-af91-8cd19bdd01a1" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/stampcrawler_015.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="51e768a3-4a97-4597-b543-f0ce958ba41c" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/as3-signals-v0.9-BETA/bin/as3-signals-v0.9-BETA.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>
+
